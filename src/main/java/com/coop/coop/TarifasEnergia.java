@@ -1,9 +1,7 @@
 package com.coop.coop;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
 @Entity
 public class TarifasEnergia
 {
@@ -13,8 +11,11 @@ public class TarifasEnergia
     private String nombre;
     private Integer tope_menor;
     private Integer tope_mayor;
-    private Integer id_categoria;
 
+
+    @ManyToOne
+    @JoinColumn(name = "id_categoria")
+    private TarifaCategoria tarifaCategoria;
     public Integer getId() {
         return id;
     }
