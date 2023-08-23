@@ -1,4 +1,4 @@
-package com.coop.coop;
+package com.coop.coop.Bbdd;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
